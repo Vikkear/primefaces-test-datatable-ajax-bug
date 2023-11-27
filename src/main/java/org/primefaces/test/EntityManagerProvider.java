@@ -56,6 +56,28 @@ public class EntityManagerProvider {
                 .dateCol(new Date()).child(child2).build());
         em.persist(TestJpa.builder().id(5l).stringCol("Boston").numberCol(567l).decimalCol(BigDecimal.valueOf(567.45))
                 .dateCol(new Date()).child(child2).build());
+        em.persist(TestJpa.builder().id(6l).stringCol("Keps").numberCol(568l).decimalCol(BigDecimal.valueOf(567.45))
+                .dateCol(new Date()).child(child2).build());
+        em.persist(TestJpa.builder().id(7l).stringCol("Cap").numberCol(569l).decimalCol(BigDecimal.valueOf(567.45))
+                .dateCol(new Date()).child(child2).build());
+        em.persist(TestJpa.builder().id(8l).stringCol("Canada").numberCol(570l).decimalCol(BigDecimal.valueOf(567.45))
+                .dateCol(new Date()).child(child2).build());
+        em.persist(TestJpa.builder().id(9l).stringCol("Bahamas").numberCol(547l).decimalCol(BigDecimal.valueOf(567.45))
+                .dateCol(new Date()).child(child2).build());
+        em.persist(TestJpa.builder().id(10l).stringCol("Washington D.C").numberCol(527l).decimalCol(BigDecimal.valueOf(567.45))
+                .dateCol(new Date()).child(child2).build());
+        em.persist(TestJpa.builder().id(11l).stringCol("Cory in the House").numberCol(517l).decimalCol(BigDecimal.valueOf(567.45))
+                .dateCol(new Date()).child(child2).build());
+        em.persist(TestJpa.builder().id(12l).stringCol("That's so Raven").numberCol(597l).decimalCol(BigDecimal.valueOf(567.45))
+                .dateCol(new Date()).child(child2).build());
+        em.persist(TestJpa.builder().id(13l).stringCol("I am running out of").numberCol(5227l).decimalCol(BigDecimal.valueOf(567.45))
+                .dateCol(new Date()).child(child2).build());
+        em.persist(TestJpa.builder().id(14l).stringCol("Imagination").numberCol(417l).decimalCol(BigDecimal.valueOf(567.45))
+                .dateCol(new Date()).child(child2).build());
+        em.persist(TestJpa.builder().id(15l).stringCol("Andy Saled").numberCol(52347l).decimalCol(BigDecimal.valueOf(567.45))
+                .dateCol(new Date()).child(child2).build());
+        em.persist(TestJpa.builder().id(16l).stringCol("Para Kim").numberCol(56787l).decimalCol(BigDecimal.valueOf(567.45))
+                .dateCol(new Date()).child(child2).build());
 
         em.getTransaction().commit();
     }
