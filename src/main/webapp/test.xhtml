@@ -13,20 +13,22 @@
 
     <h1>#{testView.string}</h1>
     <h:form id="frmTest">
-        <p:dataTable id="tblJpa" widgetVar="jpaTable" var="row" value="#{testView.lazyDataModel}" lazy="true" rows="4"
-            liveResize="true" liveScroll="true" scrollHeight="200" scrollRows="4" scrollable="true">
+        <p:dataTable id="tblJpa" 
+                     widgetVar="jpaTable" 
+                     var="row" 
+                     value="#{testView.testJpaList}" 
+                     rows="10" 
+                     scrollable="true">
             <p:column field="id" />
-            <p:column field="stringCol" />
+            <p:column field="stringCol">
+                <p:inputText value="#{row.stringCol}" />
+            </p:column>
             <p:column field="numberCol" />
             <p:column field="decimalCol" />
-            <p:column field="dateCol">
-                <f:facet name="filter">
-                    <p:datePicker onchange="PF('jpaTable').filter()" />
-                </f:facet>
+            <p:column field="decimalCol">
+                <p:commandButton value="Remove" actionListener="#{testView.removeTestJpa(row)}" oncomplete="PF('jpaTable').filter();"/>
             </p:column>
-            <p:column field="child.stringCol" />
         </p:dataTable>
-        <p:commandButton update="tblJpa" />
     </h:form>
 
 </h:body>
